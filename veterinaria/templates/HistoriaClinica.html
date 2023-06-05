@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Historia Clinica</title>
+    <link type='image/png' href='{% static "Imagenes/HistoriaClinicaIcono.png" %}' rel='icon' />
+    <link type='text/css' href='{% static "css/EstilosHistoriaClinica.css" %}' rel='stylesheet' />
+</head>
+<body>
+
+    <center>
+        <form method="POST" action="{% url 'EliminarHistoriaClinica' %}">
+            {% csrf_token %}
+            <b>Si quieres eliminar, digita aqui el id de la historia clinica a eliminar</b>
+            <input type="text" name="IdOrden" placeholder="Historia clinica a eliminar" class="s">
+            <button type="submit" class="Borrar">Eliminar</button>
+            </form>
+            <form method="post">
+    {% csrf_token %}
+    <div class="historiaclinica">
+        <label for="IdOrden"
+            class="historiaclinica">Id de orden:</label>
+            <input type="text" class="historiaclinica" name="IdOrden" required>
+    </div>
+        <div class="historiaclinica">
+            <label for="MedicoVQA"
+                class="Historias">Medico veterinario que lo atendió:</label>
+            <input type="text" class="historiaclinica"
+                id="MedicoVQA"
+                aria-describedby="MedicoVQAA" name="MedicoVQA"
+                required>
+        </div>
+
+        <div class="historiaclinica">
+            <label for="MotivoC"
+                class="Historias">Motivo de consulta:</label>
+            <input type="text" class="historiaclinica"
+                id="MotivoC"
+                aria-describedby="MotivoCA" name="MotivoC"
+                required>
+        </div>
+
+        <div class="historiaclinica">
+            <label for="FechaH"
+                class="Historias">Fecha:</label>
+            <input type="date" class="historiaclinica"
+                id="FechaH"
+                aria-describedby="FechaHA" name="FechaH"
+                required>
+        </div>
+
+        <div class="historiaclinica">
+            <label for="Sintomatologia"
+                class="Historias">Sintomatologia:</label>
+            <input type="text" class="historiaclinica"
+                id="Sintomatologia"
+                aria-describedby="SintomatologiaA" name="Sintomatologia"
+                required>
+        </div>
+        
+        <div class="historiaclinica">
+            <label for="Diagonostico"
+                class="Historias">Diagonostico:</label>
+            <input type="text" class="historiaclinica"
+                id="Diagonostico"
+                aria-describedby="DiagonosticoA" name="Diagonostico"
+                required>
+        </div>
+
+        <div class="historiaclinica">
+            <label for="Medicamentov"
+                class="Historias">Medicamento:</label>
+            <input type="text" class="historiaclinica"
+                id="Medicamentov"
+                aria-describedby="MedicamentovA" name="Medicamentov"
+                required>
+        </div>
+
+        <div class="historiaclinica">
+            <label for="DosisM"
+                class="Historias">Dosis de medicamento:</label>
+            <input type="integer" class="historiaclinica"
+                id="DosisM"
+                aria-describedby="DosisMA" name="DosisM"
+                required>
+        </div>
+
+        <div class="historiaclinica">
+            <label for="HistorialV"
+                class="Historias">Historial vacunacion:</label>
+            <input type="date" class="historiaclinica"
+                id="HistorialV"
+                aria-describedby="HistorialVA" name="HistorialV"
+                required>
+        </div>
+
+        <div class="historiaclinica">
+            <label for="MedicamentoA"
+                class="Historias">Medicamento:</label>
+            <input type="text" class="historiaclinica"
+                id="MedicamentoA"
+                aria-describedby="MedicamentoAA" name="MedicamentoA"
+                required>
+        </div>
+
+        <div class="historiaclinica">
+            <label for="DetalleP"
+                class="Historias">Detalles del procedimiento:</label>
+            <input type="text" class="historiaclinica"
+                id="DetalleP"
+                aria-describedby="DetallePA" name="DetalleP"
+                required>
+        </div>
+
+        <div class="historiaclinica">
+            <label for="AnulaciónO"
+                class="Historias">Anulación:</label>
+            <input type="text" class="historiaclinica"
+                id="AnulaciónO"
+                aria-describedby="AnulaciónOA" name="AnulaciónO"
+                required>
+        </div>
+
+        <button type="submit" class="Boton">Registrar historia clinica</button>
+        <form action="{% url 'ActualizarHistoriaClinica' %}" method="post">
+            {% csrf_token %}
+            <button type="submit" class="Boton">Actualizar historia clinica</button>
+          </form>
+        <div class="Salto">
+            <a href="http://127.0.0.1:8000/ConsultarHistoriaClinica">O consulta todas las historias clinicas</a>
+            </div>
+
+    </form>
+</center>
+    </body>
+    </html>

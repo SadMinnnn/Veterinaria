@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link type='image/png' href='{% static "Imagenes/RegistrarIcono.png" %}' rel='icon' />
+    <link type='text/css' href='{% static "css/EstilosRegistrar.css" %}' rel='stylesheet' />
+    <title>Registrarse</title>
+</head>
+<body>
+    <center>
+    <h1>Registra cualquier tipo de cuenta</h1>
+    <form method="post">
+        {% csrf_token %}
+        <div class="registrarse">
+            <label for="Usuario"
+                class="HistoriasClinicas">Registra tu usuario: </label>
+            <input type="text" class="registrarse"
+                id="Usuario"
+                aria-describedby="UsuarioA" name="Usuario"
+                required>
+        </div>
+
+        <div class="registrarse">
+            <label for="Contra"
+                class="HistoriasClinicas">Registra tu contraseña: </label>
+            <input type="password" class="registrarse"
+                id="Contra"
+                aria-describedby="ContraA" name="Contra"
+                required>
+        </div>
+
+        <label for="Tipo"
+            class="Tipo">Tipo:</label>
+        <select name="Tipo" class>
+            <option value="1">Administrador</option>
+            <option value="2">Veterinario</option>
+            <option value="3">Vendedor</option>
+            <option value="4">Dueño de mascota</option>
+        </select>
+        
+            <button type="submit">Registrarse</button>
+    </form>
+</center>
+    
+        
+
+
+
+
+</body>
+
+</html>

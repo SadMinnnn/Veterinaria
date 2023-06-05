@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Consultar historias clinicas</title>
+    <link type='image/png' href='{% static "Imagenes/ConsultarHistoriaClinica.png" %}' rel='icon' />
+    <link type='text/css' href='{% static "css/.css" %}' rel='stylesheet' />
+</head>
+<body>
+    <center>
+
+        <main class="container">
+            <h1>Listado de historias clinicas</h1>
+            <table class="table">
+                <thead>
+                  <tr>
+                    <th scope="col">Id de orden</th>
+                    <th scope="col">medico veterinario que lo atendió</th>
+                    <th scope="col">motivo de consulta</th>
+                    <th scope="col">Fecha</th>
+                    <th scope="col">Sintomatologia</th>
+                    <th scope="col">Diagonostico</th>
+                    <th scope="col">Medicamentov</th>
+                    <th scope="col">Dosis del medicamento</th>
+                    <th scope="col">HistorialV</th>
+                    <th scope="col">Medicamento </th>
+                    <th scope="col">DetalleP</th>
+                    <th scope="col">AnulaciónO</th>
+                  </tr>
+                </thead>
+                <tbody>
+                {% for HistoriaClinicas in HistoriaClinica %}
+                  <tr>
+                    <th scope="row">{{ HistoriaClinicas.IdOrden }}</th>
+                    <td>{{ HistoriaClinicas.IdOrden }}</td>
+                    <td>{{ HistoriaClinicas.MedicoVQA }}</td>
+                    <td>{{ HistoriaClinicas.MotivoC }}</td>
+                    <td>{{ HistoriaClinicas.FechaH }}</td>
+                    <td>{{ HistoriaClinicas.Sintomatologia}}</td>
+                    <td>{{ HistoriaClinicas.Diagonostico }}</td>
+                    <td>{{ HistoriaClinicas.Medicamentov }}</td>
+                    <td>{{ HistoriaClinicas.DosisM }}</td>
+                    <td>{{ HistoriaClinicas.HistorialV }}</td>
+                    <td>{{ HistoriaClinicas.MedicamentoA }}</td>
+                    <td>{{ HistoriaClinicas.DetalleP }}</td>
+                    <td>{{ HistoriaClinicas.AnulaciónO }}</td>
+                  </tr>
+                  {%endfor%}
+                </tbody>
+              </table>
+        </main>
+
+    </center>
+</body>
+</html>

@@ -1,0 +1,16 @@
+body
+{
+
+background-image: url(../Imagenes/MedicoVeterinarioFondo.jpg);
+background-position: 0px 950px;
+
+}
+
+.Salto
+{
+
+    position: relative;
+    top: 400px;
+
+
+}

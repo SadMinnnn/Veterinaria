@@ -1,0 +1,64 @@
+body
+{
+background-image: url(../Imagenes/RegistrarFondo.jpg);
+background-position: 0px 950px;
+}
+
+
+h1
+{
+
+    position: relative;
+    top: 300px;
+
+}
+
+.registrarse
+{
+
+
+    position: relative;
+    top: 150px;
+
+
+}
+
+.HistoriasClinicas
+{
+
+
+    position: relative;
+    top: 150px;
+
+
+}
+
+.Tipo
+{
+
+
+    position: relative;
+    top: 320px;
+
+
+}
+
+select
+{
+
+
+    position: relative;
+    top: 320px;
+
+
+}
+
+button
+{
+
+
+    position: relative;
+    top: 320px;
+
+
+}

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Iniciar sesion</title>
+        <link type='image/png' href='{% static "Imagenes/IniciarSesionIcono.png" %}' rel='icon' />
+        <link type='text/css' href='{% static "css/EstilosIniciar.css" %}' rel='stylesheet' />
+    </head>
+<body>
+
+    <center>  
+    <form method="post">
+        <div class="container">
+            <h1>Iniciar sesión</h1>
+            {% csrf_token %}
+                </thead>
+                <tbody>
+                    <div class="IniciarSesion">
+                    <tr>
+                        <td>Ingresa tu usuario: </td>
+                        <td><input type="text" placeholder="Ingresa tu usuario" name="Usuario" required></td>
+                    </tr>
+                    </div>
+                    <div class="IniciarSesion">
+                    <tr>
+                        <td>Ingresa tu contraseña: </td>
+                        <td><input type="password" placeholder="Ingresa tu contraseña" name="Contra" required></td>
+                    </tr>
+                </div>
+                    <tr>
+                        <td colspan="2" align="center">
+                            <button type="submit">Iniciar Sesion</button> 
+                            &nbsp;&nbsp;
+                        </td>
+
+                    </tr>
+                </tbody>
+            {% if messages %}
+                {% for msg in messages %}
+                <b>{{msg}}</b>
+                {% endfor %}
+                {% endif %}
+        </div>
+    </center>
+</form>
+</body>
+</html>

@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Ventas medicamentos</title>
+    <link type='image/png' href='{% static "Imagenes/VentasMedicamentosIcono.png" %}' rel='icon' />
+    <link type='text/css' href='{% static "css/EstilosVentasMedicamentos.css" %}' rel='stylesheet' />
+</head>
+<body>
+<center>
+    <form method="POST" action="{% url 'EliminarVentasMedicamentos' %}">
+        {% csrf_token %}
+        <b>Si quieres eliminar, digita aqui el id de la venta a eliminar</b>
+        <input type="text" name="IdFactura" placeholder="Id de la venta a eliminar" class="s">
+        <button type="submit" class="Borrar">Eliminar</button>
+        </form>
+<form method="post">
+    {% csrf_token %}
+    <FONT COLOR="black">
+        <div class="ventasmedicamentos">
+            <label for="IdFactura"
+                class="HistoriasClinicas">Id de factura:</label>
+                <input type="text" class="ventasmedicamentos" name="IdFactura" required>
+        </div>
+    </FONT>
+    <FONT COLOR="black">
+        <div class="ventasmedicamentos">
+            <label for="IdDueño"
+                class="HistoriasClinicas">Id de dueño:</label>
+            <input type="integer" class="ventasmedicamentos"
+                id="IdDueño"
+                aria-describedby="IdDueñoA" name="IdDueño"
+                required>
+        </div>
+    </FONT>
+    <FONT COLOR="black">
+        <div class="ventasmedicamentos">
+            <label for="IdMascota"
+                class="HistoriasClinicas">Id de mascota:</label>
+            <input type="integer" class="ventasmedicamentos"
+                id="IdMascota"
+                aria-describedby="IdMascotaA" name="IdMascota"
+                required>
+        </div>
+    </FONT>
+    <FONT COLOR="black">
+        <div class="ventasmedicamentos">
+            <label for="IdOrden"
+                class="HistoriasClinicas">Id de orden:</label>
+            <input type="integer" class="ventasmedicamentos"
+                id="IdOrden"
+                aria-describedby="IdOrdenA" name="IdOrden"
+                required>
+        </div>
+    </FONT>
+    <FONT COLOR="black">
+        <div class="ventasmedicamentos">
+            <label for="NombreP"
+                class="HistoriasClinicas">Nombre del producto:</label>
+            <input type="text" class="ventasmedicamentos"
+                id="NombreP"
+                aria-describedby="NombrePA" name="NombreP"
+                required>
+        </div>
+    </FONT>
+    <FONT COLOR="black">
+        <div class="ventasmedicamentos">
+            <label for="FechaV"
+                class="HistoriasClinicas">Fecha:</label>
+            <input type="date" class="ventasmedicamentos"
+                id="FechaV"
+                aria-describedby="FechaV" name="FechaV"
+                required>
+        </div>
+    </FONT>
+    <FONT COLOR="black">
+        <div class="ventasmedicamentos">
+            <label for="Valor"
+                class="HistoriasClinicas">Valor:</label>
+            <input type="integer" class="ventasmedicamentos"
+                id="Valor"
+                aria-describedby="ValorA" name="Valor"
+                required>
+        </div>
+    </FONT>
+    <FONT COLOR="black">
+        <div class="ventasmedicamentos">
+            <label for="Cantidad"
+                class="HistoriasClinicas">Cantidad:</label>
+            <input type="integer" class="ventasmedicamentos"
+                id="Cantidad"
+                aria-describedby="CantidadA" name="Cantidad"
+                required>
+        </div>
+    </FONT>
+
+        <button type="submit" class="Boton">Generar venta</button>
+
+        <form action="{% url 'ActualizarVentasMedicamentos' %}" method="post">
+            {% csrf_token %}
+            <button type="submit" class="Boton">Actualizar Factura</button>
+          </form>
+
+
+        <div class="Salto">
+            <a href="http://127.0.0.1:8000/ConsultarVentasMedicamentos">O consulta todas las ventas de medicamentos</a>
+        </div>
+    </form>
+    </center>
+    </body>
+    </html>

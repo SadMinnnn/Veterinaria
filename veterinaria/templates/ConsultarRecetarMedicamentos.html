@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Consultar recetas de medicamentos</title>
+    <link type='image/png' href='{% static "Imagenes/ConsultarRecetarMedicamentosIcono.png" %}' rel='icon' />
+    <link type='text/css' href='{% static "css/.css" %}' rel='stylesheet' />
+</head>
+<body>
+    <center>
+
+        <main class="container">
+            <h1>Listado de recetas de medicamentos</h1>
+            <table class="table">
+                <thead>
+                  <tr>
+                    <th scope="col">Id de mascota</th>
+                    <th scope="col">Cedula del dueño</th>
+                    <th scope="col">Nombre medicamentos</th>
+                    <th scope="col">Fecha de generacion</th>
+                    <th scope="col">Cedula del veterinario que lo ordeno</th>
+                  </tr>
+                </thead>
+                <tbody>
+                {% for RecetarMedicamento in RecetarMedicamentos %}
+                  <tr>
+                    <th scope="row">{{ RecetarMedicamento.idMedico }}</th>
+                    <td>{{ RecetarMedicamento.IdMedico }}</td>
+                    <td>{{ RecetarMedicamento.CedulaD }}</td>
+                    <td>{{ RecetarMedicamento.FechaR }}</td>
+                    <td>{{ RecetarMedicamento.NombreMD}}</td>
+                    <td>{{ RecetarMedicamento.CedulaV }}</td>
+                  </tr>
+                  {%endfor%}
+                </tbody>
+              </table>
+        </main>
+
+    </center>
+</body>
+</html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Consultar ventas de medicamentos</title>
+    <link type='image/png' href='{% static "Imagenes/ConsultarVentasMedicamentosIcono.png" %}' rel='icon' />
+    <link type='text/css' href='{% static "css/.css" %}' rel='stylesheet' />
+</head>
+<body>
+    <center>
+
+        <main class="container">
+            <h1>Listado de ventas de medicamentos</h1>
+            <table class="table">
+                <thead>
+                  <tr>
+                    <th scope="col">Id de factura</th>
+                    <th scope="col">Id de dueño</th>
+                    <th scope="col">Id de mascota</th>
+                    <th scope="col">Id de orden</th>
+                    <th scope="col">Nombre del producto</th>
+                    <th scope="col">Fecha</th>
+                    <th scope="col">Valor</th>
+                    <th scope="col">Cantidad</th>
+                  </tr>
+                </thead>
+                <tbody>
+                {% for VentasMedicamento in VentasMedicamentos %}
+                  <tr>
+                    <th scope="row">{{ VentasMedicamento.IdFactura }}</th>
+                    <td>{{ VentasMedicamento.IdFactura }}</td>
+                    <td>{{ VentasMedicamento.IdDueño }}</td>
+                    <td>{{ VentasMedicamento.IdMascota }}</td>
+                    <td>{{ VentasMedicamento.IdOrden }}</td>
+                    <td>{{ VentasMedicamento.NombreP}}</td>
+                    <td>{{ VentasMedicamento.FechaV }}</td>
+                    <td>{{ VentasMedicamento.Valor }}</td>
+                    <td>{{ VentasMedicamento.Cantidad }}</td>
+                  </tr>
+                  {%endfor%}
+                </tbody>
+              </table>
+        </main>
+
+    </center>
+</body>
+</html>

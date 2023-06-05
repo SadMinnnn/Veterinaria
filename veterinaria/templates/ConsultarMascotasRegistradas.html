@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Consultar mascotas registradas</title>
+    <link type='image/png' href='{% static "Imagenes/ConsultarMascotasRegistradas.png" %}' rel='icon' />
+    <link type='text/css' href='{% static "css/.css" %}' rel='stylesheet' />
+</head>
+<body>
+    <center>
+
+        <main class="container">
+            <h1>Listado de mascotas registradas</h1>
+            <table class="table">
+                <thead>
+                  <tr>
+                    <th scope="col">Id de la mascota</th>
+                    <th scope="col">Cedula del dueño</th>
+                    <th scope="col">Edad de la mascota</th>
+                    <th scope="col">Especie de la mascota</th>
+                    <th scope="col">Raza de la mascota</th>
+                    <th scope="col">Color de la mascota</th>
+                    <th scope="col">Tamaño de la mascota</th>
+                    <th scope="col">Peso de la mascota</th>
+                  </tr>
+                </thead>
+                <tbody>
+                {% for RegistrarMascotas in RegistrarMascota %}
+                  <tr>
+                    <th scope="row">{{ RegistrarMascotas.id }}</th>
+                    <td>{{ RegistrarMascotas.CedulaD }}</td>
+                    <td>{{ RegistrarMascotas.Edad }}</td>
+                    <td>{{ RegistrarMascotas.Especie }}</td>
+                    <td>{{ RegistrarMascotas.Raza}}</td>
+                    <td>{{ RegistrarMascotas.Color }}</td>
+                    <td>{{ RegistrarMascotas.Tamaño }}</td>
+                    <td>{{ RegistrarMascotas.Peso }}</td>
+                  </tr>
+                  {%endfor%}
+                </tbody>
+              </table>
+        </main>
+
+    </center>
+</body>
+</html>

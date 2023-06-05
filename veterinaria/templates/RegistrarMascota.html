@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Registrar mascota</title>
+    <link type='image/png' href='{% static "Imagenes/RegistrarMascotaIcono.png" %}' rel='icon' />
+    <link type='text/css' href='{% static "css/EstilosRegistrarMascota.css" %}' rel='stylesheet' />
+</head>
+<body>
+    <center>
+        <form method="POST" action="{% url 'EliminarRegistrarMascota' %}">
+            {% csrf_token %}
+            <b>Si quieres eliminar, digita aqui el nombre de la mascota a eliminar</b>
+            <input type="text" name="Nombre" placeholder="Nombre de la mascota" class="s">
+            <button type="submit" class="Borrar">Eliminar</button>
+            </form>
+<form method="post">
+    {% csrf_token %}
+    <FONT COLOR="black">
+        <div class="registrarmascota">
+            <label for="Nombre"
+                class="HistoriasClinicas">Nombre de mascota:</label>
+                <input type="text" class="registrarmascota" name="Nombre" required>
+        </div>
+    </FONT>
+    <FONT COLOR="black">
+        <div class="registrarmascota">
+            <label for="CedulaD"
+                class="HistoriasClinicas">Cedula del dueño:</label>
+            <input type="integer" class="registrarmascota"
+                id="CedulaD"
+                aria-describedby="CedulaDA" name="CedulaD"
+                required>
+        </div>
+    </FONT>
+    <FONT COLOR="black">
+        <div class="registrarmascota">
+            <label for="Edad"
+                class="HistoriasClinicas">Edad de la mascota:</label>
+            <input type="integer" class="registrarmascota"
+                id="Edad"
+                aria-describedby="EdadA" name="Edad"
+                required>
+        </div>
+    </FONT>
+        <FONT COLOR="black">
+        <div class="registrarmascota">
+            <label for="Especie"
+                class="HistoriasClinicas">Especie de la mascota:</label>
+            <input type="text" class="registrarmascota"
+                id="Especie"
+                aria-describedby="EspecieA" name="Especie"
+                required>
+        </div>
+    </FONT>
+    <FONT COLOR="black">
+        <div class="registrarmascota">
+            <label for="Raza"
+                class="HistoriasClinicas">Raza de la mascota:</label>
+            <input type="text" class="registrarmascota"
+                id="Raza"
+                aria-describedby="RazaA" name="Raza"
+                required>
+        </div>
+    </FONT>
+
+    <FONT COLOR="black">
+        <div class="registrarmascota">
+            <label for="Color"
+                class="HistoriasClinicas">Color de la mascota:</label>
+            <input type="text" class="registrarmascota"
+                id="Color"
+                aria-describedby="ColorA" name="Color"
+                required>
+        </div>
+    </FONT>
+
+    <FONT COLOR="black">
+        <div class="registrarmascota">
+            <label for="Tamaño"
+                class="HistoriasClinicas">Tamaño de la mascota:</label>
+            <input type="integer" class="registrarmascota"
+                id="Tamaño"
+                aria-describedby="TamañoA" name="Tamaño"
+                required>
+        </div>
+    </FONT>
+
+    <FONT COLOR="black">
+        <div class="registrarmascota">
+            <label for="Peso"
+                class="HistoriasClinicas">Peso de la mascota:</label>
+            <input type="integer" class="registrarmascota"
+                id="Peso"
+                aria-describedby="PesoA" name="Peso"
+                required>
+        </div>
+    </FONT>
+
+
+
+        <button type="submit" class="Boton">Registrar mascota</button>
+        <form action="{% url 'ActualizarRegistrarMascota' %}" method="post">
+            {% csrf_token %}
+            <button type="submit" class="Boton">Actualizar mascota</button>
+          </form>
+
+
+       
+
+          
+
+     
+        <div class="Salto">
+            <a href="http://127.0.0.1:8000/ConsultarMascotasRegistradas">O consulta todas las mascotas registradas</a>
+            </div>
+
+        </FONT>
+    </center>
+    </form>
+    </body>
+    </html>

@@ -1,0 +1,38 @@
+body
+{
+background-image: url(../Imagenes/RecetarMedicamentoFondo.jpg);
+background-position: 0px 950px;
+
+
+}
+
+
+.recetarmedicamentos
+{
+
+
+    position: relative;
+    top: 150px;
+
+
+}
+
+.HistoriasClinicas
+{
+
+
+    position: relative;
+    top: 150px;
+
+
+}
+
+.Boton
+{
+
+
+    position: relative;
+    top: 320px;
+
+
+}

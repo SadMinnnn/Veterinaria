@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Recetar Medicamentos</title>
+    <link type='image/png' href='{% static "Imagenes/RecetarMedicamentoIcono.png" %}' rel='icon' />
+    <link type='text/css' href='{% static "css/EstilosRecetarMedicamentos.css" %}' rel='stylesheet' />
+</head>
+<body>
+    <center>
+        <FONT COLOR="white">
+        <form method="POST" action="{% url 'EliminarRecetarMedicamentos' %}">
+            {% csrf_token %}
+            <b>Si quieres eliminar, digita aqui el id de la receta a eliminar</b>
+            <input type="text" name="IdMedico" placeholder="Id de la receta a eliminar" class="s">
+            <button type="submit" class="Borrar">Eliminar</button>
+            </form>
+        </FONT>
+<form method="post">
+    {% csrf_token %}
+    <FONT COLOR="white">
+        <div class="recetarmedicamentos">
+            <label for="IdMedico"
+                class="HistoriasClinicas">Id del medico:</label>
+                <input type="text" class="recetarmedicamentos" name="IdMedico" required>
+        </div>
+    </FONT>
+    <FONT COLOR="white">
+        <div class="recetarmedicamentos">
+            <label for="CedulaD"
+                class="HistoriasClinicas">Cedula del dueño:</label>
+            <input type="integer" class="recetarmedicamentos"
+                id="CedulaD"
+                aria-describedby="CedulaDA" name="CedulaD"
+                required>
+        </div>
+    </FONT>
+    <FONT COLOR="white">
+        <div class="recetarmedicamentos">
+            <label for="FechaR"
+                class="HistoriasClinicas">Fecha de generacion:</label>
+            <input type="date" class="recetarmedicamentos"
+                id="FechaR"
+                aria-describedby="FechaRA" name="FechaR"
+                required>
+        </div>
+    </FONT>
+        <FONT COLOR="white">
+        <div class="recetarmedicamentos">
+            <label for="NombreMD"
+                class="HistoriasClinicas">Nombre medicamentos:</label>
+            <input type="text" class="recetarmedicamentos"
+                id="NombreMD"
+                aria-describedby="NombreMDA" name="NombreMD"
+                required>
+        </div>
+    </FONT>
+    <FONT COLOR="white">
+        <div class="recetarmedicamentos">
+            <label for="CedulaV"
+                class="HistoriasClinicas">Cedula del veterinario que lo ordeno:</label>
+            <input type="integer" class="recetarmedicamentos"
+                id="CedulaV"
+                aria-describedby="CedulaVA" name="CedulaV"
+                required>
+        </div>
+    </FONT>
+
+        <button type="submit" class="Boton">Recetar medicamento</button>
+        
+        <form action="{% url 'ActualizarRecetarMedicamentos' %}" method="post">
+            {% csrf_token %}
+            <button type="submit" class="Boton">Actualizar Factura</button>
+          </form>
+
+
+
+
+
+        <div class="Salto">
+            <a href="http://127.0.0.1:8000/ConsultarRecetarMedicamentos">O consulta todas las recetas</a>
+            </div>
+
+        </FONT>
+    </center>
+    </form>
+    </body>
+    </html>

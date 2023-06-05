@@ -1,0 +1,47 @@
+body
+{
+background-image: url(../Imagenes/HistoriaClinicaFondo.jpg);
+background-position: 0px 950px;
+
+
+}
+
+
+.historiaclinica
+{
+
+
+    position: relative;
+    top: 150px;
+
+
+}
+
+.Historias
+{
+
+
+    position: relative;
+    top: 150px;
+
+
+}
+
+.Boton
+{
+
+
+    position: relative;
+    top: 320px;
+
+
+}
+
+.Salto
+{
+
+    position: relative;
+    top: 350px;
+
+
+}

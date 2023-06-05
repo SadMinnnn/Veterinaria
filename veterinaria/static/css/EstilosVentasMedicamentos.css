@@ -1,0 +1,47 @@
+body
+{
+background-image: url(../Imagenes/VentasMedicamentosFondo.jpg);
+background-position: 0px 950px;
+
+
+}
+
+
+.ventasmedicamentos
+{
+
+
+    position: relative;
+    top: 150px;
+
+
+}
+
+.HistoriasClinicas
+{
+
+
+    position: relative;
+    top: 150px;
+
+
+}
+
+.Boton
+{
+
+
+    position: relative;
+    top: 320px;
+
+
+}
+
+.Salto
+{
+
+    position: relative;
+    top: 350px;
+
+
+}
